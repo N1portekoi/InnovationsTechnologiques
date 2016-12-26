@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Technology Innovation</string>
-    <string name="test">English</string>
+    <string name="app_name">SCORE</string>
+    <string name="hintLogin">Login</string>
+    <string name="hintPassword">Password</string>
+    <string name="btnSignIn">Sign in</string>
+    <string name="btnSignUp">Sign up</string>
 </resources>

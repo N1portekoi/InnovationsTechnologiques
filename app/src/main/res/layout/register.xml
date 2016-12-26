@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -6,7 +7,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    tools:context="be.condorcet.stablum.innovationstechnologiques.MainActivity">
+    tools:context="be.condorcet.stablum.innovationstechnologiques.Register">
 
     <EditText
         android:inputType="textPersonName"
@@ -30,24 +31,24 @@
         android:background="@drawable/shape"
         android:id="@+id/editPassword" />
 
+    <EditText
+        android:inputType="textPassword"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:hint="@string/hintConfirmPassword"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/shape"
+        android:id="@+id/editConfirmPassword" />
+
     <Button
         android:text="@string/btnSignIn"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="210dp"
         android:background="@drawable/shape"
         android:id="@+id/btnSignIn" />
-
-    <Button
-        android:text="@string/btnSignUp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:background="@drawable/shape"
-        android:id="@+id/btnSignUp"
-        android:onClick="onClickRegister"/>
 </RelativeLayout>

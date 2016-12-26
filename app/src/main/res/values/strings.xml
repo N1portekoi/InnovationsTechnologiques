@@ -1,7 +1,20 @@
 <resources>
-    <string name="app_name">SCORE</string>
+    <!-- Application -->
+    <string name="titleApplication">SCORE !</string>
+    <!-- Connection -->
+    <string name="titleConnection">Connection</string>
     <string name="hintLogin">Login</string>
     <string name="hintPassword">Password</string>
     <string name="btnSignIn">Sign in</string>
     <string name="btnSignUp">Sign up</string>
+    <!-- Register -->
+    <string name="titleRegister">Register</string>
+    <string name="hintConfirmPassword">Confirm Password</string>
+
+
+
+
+
+    <!-- TEST -->
+    <string name="test">Test</string>
 </resources>

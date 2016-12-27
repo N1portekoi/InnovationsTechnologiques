@@ -7,7 +7,7 @@
     <string name="hintPassword">Password</string>
     <string name="btnSignIn">Sign in</string>
     <string name="btnSignUp">Sign up</string>
-    <!-- Register -->
+    <!-- Controller_Register -->
     <string name="titleRegister">Register</string>
     <string name="hintConfirmPassword">Confirm Password</string>
     <string name="btnRegister">Register</string>

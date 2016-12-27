@@ -6,6 +6,6 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    tools:context="be.condorcet.stablum.innovationstechnologiques.Register">
+    tools:context="be.condorcet.stablum.innovationstechnologiques.Controller_Users">
 
 </RelativeLayout>

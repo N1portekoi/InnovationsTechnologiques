@@ -6,50 +6,60 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    tools:context="be.condorcet.stablum.innovationstechnologiques.MainActivity">
+    tools:context="be.condorcet.stablum.innovationstechnologiques.Controller_Menu">
 
-    <EditText
-        android:inputType="textPersonName"
+    <Button
+        android:text="@string/btnScore"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:hint="@string/hintLogin"
+        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@drawable/shape"
-        android:id="@+id/editPseudo" />
-
-    <EditText
-        android:inputType="textPassword"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:hint="@string/hintPassword"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/shape"
-        android:id="@+id/editPassword" />
+        android:onClick="onClick"
+        android:id="@+id/btnScore" />
 
     <Button
-        android:text="@string/btnSignIn"
+        android:text="@string/btnTop10"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="110dp"
         android:background="@drawable/shape"
-        android:id="@+id/btnSignIn"
-        android:onClick="onClickConnection" />
+        android:onClick="onClick"
+        android:id="@+id/btnTop10" />
 
     <Button
-        android:text="@string/btnSignUp"
+        android:text="@string/btnGames"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="170dp"
         android:background="@drawable/shape"
-        android:id="@+id/btnSignUp"
-        android:onClick="onClickRegister" />
+        android:onClick="onClick"
+        android:id="@+id/btnGames" />
 
+    <Button
+        android:text="@string/btnUsers"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:background="@drawable/shape"
+        android:onClick="onClick"
+        android:id="@+id/btnUsers" />
+
+    <Button
+        android:text="@string/btnSignOut"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:background="@drawable/shape"
+        android:onClick="onClick"
+        android:id="@+id/btnSignOut" />
 </RelativeLayout>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="be.condorcet.stablum.innovationstechnologiques">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,40 +11,40 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".Controller_Connection">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".Register"
+        <activity android:name=".Controller_Register"
             android:label="@string/titleRegister"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".Controller_Connection" >
         </activity>
 
-        <activity android:name=".Menu"
+        <activity android:name=".Controller_Menu"
             android:label="@string/titleMenu" >
         </activity>
 
-        <activity android:name=".Score"
+        <activity android:name=".Controller_Score"
             android:label="@string/titleScore"
-            android:parentActivityName=".Menu" >
+            android:parentActivityName=".Controller_Menu" >
         </activity>
 
-        <activity android:name=".Top10"
+        <activity android:name=".Controller_Top10"
             android:label="@string/titleTop10"
-            android:parentActivityName=".Menu" >
+            android:parentActivityName=".Controller_Menu" >
         </activity>
 
-        <activity android:name=".Games"
+        <activity android:name=".Controller_Games"
             android:label="@string/titleGames"
-            android:parentActivityName=".Menu" >
+            android:parentActivityName=".Controller_Menu" >
         </activity>
 
-        <activity android:name=".Users"
+        <activity android:name=".Controller_Users"
             android:label="@string/titleUsers"
-            android:parentActivityName=".Menu" >
+            android:parentActivityName=".Controller_Menu" >
         </activity>
 
     </application>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="be.condorcet.stablum.innovationstechnologiques.Controller_Register">
+
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:hint="@string/hintLogin"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape"
+        android:id="@+id/editPseudo" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:hint="@string/hintPassword"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shape"
+        android:id="@+id/editPassword" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:hint="@string/hintConfirmPassword"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/shape"
+        android:id="@+id/editConfirmPassword" />
+
+    <Button
+        android:text="@string/btnRegister"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:background="@drawable/shape"
+        android:id="@+id/btnRegister"
+        android:onClick="onClick"/>
+</RelativeLayout>

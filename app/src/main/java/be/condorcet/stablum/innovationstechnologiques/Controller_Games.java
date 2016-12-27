@@ -2,15 +2,18 @@ package be.condorcet.stablum.innovationstechnologiques;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
-/**
- * Created by Ludovic on 27-12-16.
- */
+import be.condorcet.stablum.innovationstechnologiques.R;
 
-public class Users extends AppCompatActivity {
+public class Controller_Games extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.users);
+        setContentView(R.layout.view_score);
+    }
+
+    protected void onClick(View view) {
     }
 }

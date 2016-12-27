@@ -18,6 +18,14 @@
     <string name="btnGames">Games</string>
     <string name="btnUsers">Users</string>
     <string name="btnSignOut">Sign out</string>
+    <!-- Score -->
+    <string name="titleScore">Score</string>
+    <!-- Top 10 -->
+    <string name="titleTop10">Top 10</string>
+    <!-- Games -->
+    <string name="titleGames">Games</string>
+    <!-- Users -->
+    <string name="titleUsers">Users</string>
 
     <!-- TEST -->
     <string name="test">Test</string>

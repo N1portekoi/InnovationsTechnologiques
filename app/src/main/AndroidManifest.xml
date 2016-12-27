@@ -19,13 +19,30 @@
         <activity android:name=".Register"
             android:label="@string/titleRegister"
             android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="be.condorcet.stablum.innovationstechnologiques.MainActivity" />
         </activity>
 
         <activity android:name=".Menu"
             android:label="@string/titleMenu" >
+        </activity>
+
+        <activity android:name=".Score"
+            android:label="@string/titleScore"
+            android:parentActivityName=".Menu" >
+        </activity>
+
+        <activity android:name=".Top10"
+            android:label="@string/titleTop10"
+            android:parentActivityName=".Menu" >
+        </activity>
+
+        <activity android:name=".Games"
+            android:label="@string/titleGames"
+            android:parentActivityName=".Menu" >
+        </activity>
+
+        <activity android:name=".Users"
+            android:label="@string/titleUsers"
+            android:parentActivityName=".Menu" >
         </activity>
 
     </application>

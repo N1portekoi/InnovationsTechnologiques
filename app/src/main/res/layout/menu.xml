@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@drawable/shape"
+        android:onClick="onClickScore"
         android:id="@+id/btnScore" />
 
     <Button
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="110dp"
         android:background="@drawable/shape"
+        android:onClick="onClickTop10"
         android:id="@+id/btnTop10" />
 
     <Button
@@ -36,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="170dp"
         android:background="@drawable/shape"
+        android:onClick="onClickGames"
         android:id="@+id/btnGames" />
 
     <Button
@@ -46,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="230dp"
         android:background="@drawable/shape"
+        android:onClick="onClickUsers"
         android:id="@+id/btnUsers" />
 
     <Button

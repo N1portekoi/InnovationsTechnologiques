@@ -14,6 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    protected void onClickConnection(View view) {
+        Intent intent = new Intent(MainActivity.this, Menu.class);
+        startActivity(intent);
+    }
+
     protected void onClickRegister(View view) {
         Intent intent = new Intent(MainActivity.this, Register.class);
         startActivity(intent);

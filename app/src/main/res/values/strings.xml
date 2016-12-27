@@ -10,10 +10,14 @@
     <!-- Register -->
     <string name="titleRegister">Register</string>
     <string name="hintConfirmPassword">Confirm Password</string>
-
-
-
-
+    <string name="btnRegister">Register</string>
+    <!-- Menu -->
+    <string name="titleMenu">Menu</string>
+    <string name="btnScore">Score</string>
+    <string name="btnTop10">Top 10</string>
+    <string name="btnGames">Games</string>
+    <string name="btnUsers">Users</string>
+    <string name="btnSignOut">Sign out</string>
 
     <!-- TEST -->
     <string name="test">Test</string>

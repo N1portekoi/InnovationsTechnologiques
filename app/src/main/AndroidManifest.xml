@@ -24,6 +24,10 @@
                 android:value="be.condorcet.stablum.innovationstechnologiques.MainActivity" />
         </activity>
 
+        <activity android:name=".Menu"
+            android:label="@string/titleMenu" >
+        </activity>
+
     </application>
 
 </manifest>

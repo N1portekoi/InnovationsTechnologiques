@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.EditText;
-
-import be.condorcet.stablum.innovationstechnologiques.Beans.User;
 
 public class Controller_Menu extends AppCompatActivity {
 

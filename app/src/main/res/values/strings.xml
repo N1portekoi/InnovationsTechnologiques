@@ -27,11 +27,20 @@
     <!-- Users -->
     <string name="titleUsers">Users</string>
 
-    <!-- Erreurs -->
+    <!-- Connection Messages -->
     <string name="C100">Login is missing !</string>
     <string name="C110">Password is missing !</string>
     <string name="C200">Wrong Login/Password !</string>
     <string name="C1000">Server problem !</string>
     <string name="C2000">Error !</string>
+
+    <!-- Register Messages -->
+    <string name="R0">Account has been created !</string>
+    <string name="R100">Login is missing !</string>
+    <string name="R110">Password is missing !</string>
+    <string name="R120">Passwords do not match !</string>
+    <string name="R200">Login is already used !</string>
+    <string name="R1000">Server problem !</string>
+    <string name="R2000">Error !</string>
 
 </resources>

@@ -27,6 +27,11 @@
     <!-- Users -->
     <string name="titleUsers">Users</string>
 
-    <!-- TEST -->
-    <string name="test">Test</string>
+    <!-- Erreurs -->
+    <string name="C100">Login is missing !</string>
+    <string name="C110">Password is missing !</string>
+    <string name="C200">Wrong Login/Password !</string>
+    <string name="C1000">Server problem !</string>
+    <string name="C2000">Error !</string>
+
 </resources>

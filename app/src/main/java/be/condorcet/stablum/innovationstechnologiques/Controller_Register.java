@@ -19,10 +19,10 @@ public class Controller_Register extends AppCompatActivity {
     }
 
     protected void onClick(View view) {
-        User user;
+
         switch (view.getId()) {
             case R.id.btnRegister:
-                user = new User();
+                User user = new User();
                 user.setLogin(((EditText)findViewById(R.id.editPseudo)).getText().toString().trim());
                 user.setPassword(((EditText)findViewById(R.id.editPassword)).getText().toString().trim());
                 finish();

@@ -1,8 +1,9 @@
 package be.condorcet.stablum.innovationstechnologiques;
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.JsonReader;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -18,11 +19,10 @@ import java.net.URL;
  * Created by Ludovic on 27-12-16.
  */
 
-public class Task_Connection extends AsyncTask<String, Void, String> {
+public class Task_ScoreSave extends AsyncTask<String, Void, String> {
     private Context context;
-    private String login;
 
-    public Task_Connection (Context context) {
+    public Task_ScoreSave(Context context) {
         this.context = context;
     }
 
@@ -36,28 +36,24 @@ public class Task_Connection extends AsyncTask<String, Void, String> {
         String line;
         try {
             // URL
-            URL url = new URL("http://192.168.1.4/php/se_connecter.php");
-            HttpURLConnection UrlConn = (HttpURLConnection) url.openConnection();
-            UrlConn.setRequestMethod("POST");
-            UrlConn.setAllowUserInteraction(false);
-
-            // POST Parameters
-            OutputStream os = UrlConn.getOutputStream();
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-            writer.write("pseudo="+params[0] + "&mdp="+params[1]);
-            writer.flush();
-            writer.close();
-            os.close();
+            URL url = new URL("http://192.168.1.4/php/ajouter_score.php?"+
+                    "jeu="+params[0]+
+                    "&score="+params[1]+
+                    "&pseudo="+params[2]);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.setRequestProperty("Content-Type", "text/plain");
+            connection.setRequestProperty("charset", "utf-8");
+            connection.setAllowUserInteraction(false);
 
             // Reading
-            InputStream Response = UrlConn.getInputStream();
+            InputStream Response = connection.getInputStream();
             BufferedReader BufReader = new BufferedReader(new InputStreamReader(Response, "UTF-8"));
             while ((line = BufReader.readLine()) != null)
             {
                 Sb.append(line);
-                login = params[0];
             }
-            UrlConn.disconnect();
+            connection.disconnect();
         }
         catch (Exception e) {
 
@@ -73,24 +69,20 @@ public class Task_Connection extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String result)  {
         switch (result) {
             case "0":
-                Intent intent = new Intent(context, Controller_Menu.class);
-                intent.putExtra("login", login);
-                context.startActivity(intent);
+                Toast.makeText(context, R.string.SS0, Toast.LENGTH_SHORT).show();
+                ((Activity) context).finish();
                 break;
             case "100":
-                Toast.makeText(context, R.string.C100, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.SS100, Toast.LENGTH_SHORT).show();
                 break;
             case "110":
-                Toast.makeText(context, R.string.C110, Toast.LENGTH_SHORT).show();
-                break;
-            case "200":
-                Toast.makeText(context, R.string.C200, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.SS110, Toast.LENGTH_SHORT).show();
                 break;
             case "1000":
-                Toast.makeText(context, R.string.C1000, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.SS1000, Toast.LENGTH_SHORT).show();
                 break;
             default:
-                Toast.makeText(context, R.string.C2000, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.SS2000, Toast.LENGTH_SHORT).show();
                 break;
         }
     }

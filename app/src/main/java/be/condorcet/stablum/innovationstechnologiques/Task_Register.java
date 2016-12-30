@@ -60,10 +60,9 @@ public class Task_Register extends AsyncTask<String, Void, Integer> {
                 }
             }
             json.endObject();
+            json.close();
         }
-        catch (Exception e) {
-
-        }
+        catch (Exception e) {}
         return code;
     }
 

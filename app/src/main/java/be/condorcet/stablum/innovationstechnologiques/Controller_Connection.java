@@ -17,13 +17,18 @@ public class Controller_Connection extends AppCompatActivity {
     protected void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnSignIn: // Sign In
-                // User
-                User user = new User();
-                user.setLogin(((EditText)findViewById(R.id.editPseudo)).getText().toString().trim());
-                user.setPassword(((EditText)findViewById(R.id.editPassword)).getText().toString().trim());
+                // EditTexts
+                EditText editPseudo = (EditText)findViewById(R.id.editPseudo);
+                EditText editPassword = (EditText)findViewById(R.id.editPassword);
+                // Login/Password with trim()
+                String login = editPseudo.getText().toString().trim();
+                String password = editPassword.getText().toString().trim();
                 // AsyncTask
                 Task_Connection task_Connection = new Task_Connection(this);
-                task_Connection.execute(user.getLogin(), user.getPassword());
+                task_Connection.execute(login, password);
+                // Erase
+                editPseudo.setText("");
+                editPassword.setText("");
                 break;
             case R.id.btnSignUp: // Sign Up
                 Intent intent = new Intent(Controller_Connection.this, Controller_Register.class);

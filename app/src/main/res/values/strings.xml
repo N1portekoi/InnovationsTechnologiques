@@ -20,6 +20,11 @@
     <string name="btnSignOut">Sign out</string>
     <!-- Score -->
     <string name="titleScore">Score</string>
+    <string name="hintGame">Game</string>
+    <string name="btnGame">...</string>
+    <string name="listGame">Games</string>
+    <string name="hintScore">Score</string>
+    <string name="btnSaveScore">Save</string>
     <!-- Top 10 -->
     <string name="titleTop10">Top 10</string>
     <!-- Games -->
@@ -43,4 +48,17 @@
     <string name="R1000">Server problem !</string>
     <string name="R2000">Error !</string>
 
+    <!-- GameList Messages -->
+    <string name="GL500">No games found !</string>
+    <string name="Gl1000">Server problem !</string>
+    <string name="Gl2000">Error !</string>
+
+    <!-- ScoreSave Messages -->
+    <string name="SS0">Score has been saved !</string>
+    <string name="SS90">Invalid number !</string>
+    <string name="SS100">Score is missing !</string>
+    <string name="SS110">Game is missing !</string>
+    <string name="SS120">ID is missing !</string>
+    <string name="SS1000">Server problem !</string>
+    <string name="SS2000">Error !</string>
 </resources>

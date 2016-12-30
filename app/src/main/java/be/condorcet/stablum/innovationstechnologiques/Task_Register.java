@@ -34,12 +34,12 @@ public class Task_Register extends AsyncTask<String, Void, Integer> {
         try {
             // URL
             URL url = new URL("http://192.168.1.4/php/creer_compte.php");
-            HttpURLConnection UrlConn = (HttpURLConnection) url.openConnection();
-            UrlConn.setRequestMethod("POST");
-            UrlConn.setAllowUserInteraction(false);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setAllowUserInteraction(false);
 
             // POST Parameters
-            OutputStream os = UrlConn.getOutputStream();
+            OutputStream os = connection.getOutputStream();
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
             writer.write("pseudo="+params[0] + "&mdp="+params[1]);
             writer.flush();
@@ -47,7 +47,7 @@ public class Task_Register extends AsyncTask<String, Void, Integer> {
             os.close();
 
             // Reading
-            JsonReader json = new JsonReader(new InputStreamReader(UrlConn.getInputStream(), "UTF-8"));
+            JsonReader json = new JsonReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
             json.beginObject();
             while (json.hasNext()) {
                 switch (json.nextName()) {
@@ -61,6 +61,7 @@ public class Task_Register extends AsyncTask<String, Void, Integer> {
             }
             json.endObject();
             json.close();
+            connection.disconnect();
         }
         catch (Exception e) {}
         return code;
@@ -87,10 +88,10 @@ public class Task_Register extends AsyncTask<String, Void, Integer> {
                 Toast.makeText(context, R.string.R200, Toast.LENGTH_SHORT).show();
                 break;
             case 1000:
-                Toast.makeText(context, R.string.R1000, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.DB1000, Toast.LENGTH_SHORT).show();
                 break;
             default:
-                Toast.makeText(context, R.string.R2000, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.DB2000, Toast.LENGTH_SHORT).show();
                 break;
         }
     }

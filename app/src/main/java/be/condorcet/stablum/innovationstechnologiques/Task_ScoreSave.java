@@ -79,10 +79,10 @@ public class Task_ScoreSave extends AsyncTask<String, Void, String> {
                 Toast.makeText(context, R.string.SS110, Toast.LENGTH_SHORT).show();
                 break;
             case "1000":
-                Toast.makeText(context, R.string.SS1000, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.DB1000, Toast.LENGTH_SHORT).show();
                 break;
             default:
-                Toast.makeText(context, R.string.SS2000, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.DB2000, Toast.LENGTH_SHORT).show();
                 break;
         }
     }

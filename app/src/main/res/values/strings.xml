@@ -27,6 +27,7 @@
     <string name="btnSaveScore">Save</string>
     <!-- Top 10 -->
     <string name="titleTop10">Top 10</string>
+    <string name="btnTop10Display">Display</string>
     <!-- Games -->
     <string name="titleGames">Games</string>
     <!-- Users -->
@@ -36,8 +37,6 @@
     <string name="C100">Login is missing !</string>
     <string name="C110">Password is missing !</string>
     <string name="C200">Wrong Login/Password !</string>
-    <string name="C1000">Server problem !</string>
-    <string name="C2000">Error !</string>
 
     <!-- Register Messages -->
     <string name="R0">Account has been created !</string>
@@ -45,13 +44,9 @@
     <string name="R110">Password is missing !</string>
     <string name="R120">Passwords do not match !</string>
     <string name="R200">Login is already used !</string>
-    <string name="R1000">Server problem !</string>
-    <string name="R2000">Error !</string>
 
     <!-- GameList Messages -->
-    <string name="GL500">No games found !</string>
-    <string name="Gl1000">Server problem !</string>
-    <string name="Gl2000">Error !</string>
+    <string name="Gl500">No games found !</string>
 
     <!-- ScoreSave Messages -->
     <string name="SS0">Score has been saved !</string>
@@ -59,6 +54,12 @@
     <string name="SS100">Score is missing !</string>
     <string name="SS110">Game is missing !</string>
     <string name="SS120">ID is missing !</string>
-    <string name="SS1000">Server problem !</string>
-    <string name="SS2000">Error !</string>
+
+    <!-- Top50 Messages -->
+    <string name="T100">Game is missing !</string>
+    <string name="T500">Score not found !</string>
+
+    <!-- DB Messages -->
+    <string name="DB1000">Server problem !</string>
+    <string name="DB2000">Error !</string>
 </resources>

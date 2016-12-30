@@ -7,13 +7,9 @@ import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.util.JsonReader;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedWriter;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -23,14 +19,15 @@ import java.util.List;
  * Created by Ludovic on 27-12-16.
  */
 
-public class Task_GameList extends AsyncTask<Void, Void, Integer> {
+public class Task_Top10 extends AsyncTask<String, Void, Integer> {
     private Context context;
     private EditText editText;
     private List<String> list;
 
 
-    public Task_GameList(Context context) {
+    public Task_Top10(Context context) {
         this.context = context;
+        editText = ((EditText)((Activity)context).findViewById(R.id.editGame));
     }
 
     @Override
@@ -38,12 +35,18 @@ public class Task_GameList extends AsyncTask<Void, Void, Integer> {
     }
 
     @Override
-    protected Integer doInBackground(Void... params) {
+    protected Integer doInBackground(String... params) {
         int code = -1;
+        String s;
         try {
             // URL
-            URL url = new URL("http://192.168.1.4/php/lister_jeux.php");
+            URL url = new URL("http://192.168.1.4/php/afficher_top.php?"+
+                    "jeu="+params[0]);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.setRequestProperty("Content-Type", "text/plain");
+            connection.setRequestProperty("charset", "utf-8");
+            connection.setAllowUserInteraction(false);
 
             // Reading
             JsonReader json = new JsonReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
@@ -54,16 +57,21 @@ public class Task_GameList extends AsyncTask<Void, Void, Integer> {
                 code = json.nextInt();
                 json.nextName();
                 json.beginArray();
+
                 while (json.hasNext()) {
                     json.beginObject();
                     json.nextName();
-                    list.add(json.nextString());
+                    s = json.nextString();
+                    json.nextName();
+                    s += " (" + json.nextString() + ")";
+                    list.add(s);
                     json.endObject();
                 }
             }
             json.endObject();
             json.close();
             connection.disconnect();
+
         }
         catch (Exception e) {
 
@@ -82,20 +90,20 @@ public class Task_GameList extends AsyncTask<Void, Void, Integer> {
                 // Create sequence of items
                 final CharSequence[] games = list.toArray(new String[list.size()]);
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
-                dialogBuilder.setTitle(R.string.titleGames);
+                dialogBuilder.setTitle("Top 10 : " + editText.getText());
                 dialogBuilder.setItems(games, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
-                        // Affiche le choix de l'utilisateur dans editText
-                        String selectedText = games[item].toString();
-                        editText = ((EditText)((Activity)context).findViewById(R.id.editGame));
-                        editText.setText(selectedText);
+                        editText.setText("");
                     }
                 });
                 AlertDialog alertDialogObject = dialogBuilder.create();
                 alertDialogObject.show();
                 break;
+            case 100:
+                Toast.makeText(context, R.string.T100, Toast.LENGTH_SHORT).show();
+                break;
             case 500:
-                Toast.makeText(context, R.string.Gl500, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.T500, Toast.LENGTH_SHORT).show();
                 break;
             case 1000:
                 Toast.makeText(context, R.string.DB1000, Toast.LENGTH_SHORT).show();

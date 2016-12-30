@@ -59,6 +59,9 @@
     <string name="T100">Game is missing !</string>
     <string name="T500">Score not found !</string>
 
+    <!-- GameList Messages -->
+    <string name="U500">No games found !</string>
+
     <!-- DB Messages -->
     <string name="DB1000">Server problem !</string>
     <string name="DB2000">Error !</string>

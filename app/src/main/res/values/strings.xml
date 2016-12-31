@@ -30,6 +30,7 @@
     <string name="btnTop10Display">Display</string>
     <!-- Games -->
     <string name="titleGames">Games</string>
+    <string name="game">Game</string>
     <!-- Users -->
     <string name="titleUsers">Users</string>
 

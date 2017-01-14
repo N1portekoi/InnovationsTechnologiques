@@ -40,8 +40,8 @@ public class Task_Games extends AsyncTask<Void, Void, Integer> {
         String s;
         try {
             // Liste jeux
-            // URL
-            URL url = new URL("http://192.168.1.4/php/lister_jeux.php");
+            // DATABASE
+            URL url = new URL(DATABASE.getURL() + "lister_jeux.php");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             // Reading
             JsonReader json = new JsonReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
@@ -59,7 +59,7 @@ public class Task_Games extends AsyncTask<Void, Void, Integer> {
                     json.endObject();
                     // Top 1 associé au jeu
                     // URL2
-                    URL url2 = new URL("http://192.168.1.4/php/afficher_top.php?jeu="+s);
+                    URL url2 = new URL(DATABASE.getURL() + "afficher_top.php?jeu="+s);
                     HttpURLConnection connection2 = (HttpURLConnection) url2.openConnection();
                     connection2.setRequestMethod("GET");
                     connection2.setRequestProperty("Content-Type", "text/plain");

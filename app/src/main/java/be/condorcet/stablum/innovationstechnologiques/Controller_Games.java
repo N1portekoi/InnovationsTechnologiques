@@ -10,7 +10,7 @@ public class Controller_Games extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_games);
-
+        // Connexion à la DB
         Task_Games task_games = new Task_Games(this);
         task_games.execute();
     }

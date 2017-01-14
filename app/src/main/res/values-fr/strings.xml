@@ -6,11 +6,11 @@
     <string name="hintLogin">Pseudo</string>
     <string name="hintPassword">Mot de passe</string>
     <string name="btnSignIn">Se connecter</string>
-    <string name="btnSignUp">S'enregistrer</string>
+    <string name="btnSignUp">S\'enregistrer</string>
     <!-- Controller_Register -->
     <string name="titleRegister">Enregistrement</string>
     <string name="hintConfirmPassword">Confirmmer le mot de passe</string>
-    <string name="btnRegister">S'enregistrer</string>
+    <string name="btnRegister">S\'enregistrer</string>
     <!-- Menu -->
     <string name="titleMenu">Menu</string>
     <string name="btnScore">Score</string>

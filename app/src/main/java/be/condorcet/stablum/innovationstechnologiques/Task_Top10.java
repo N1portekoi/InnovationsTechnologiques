@@ -39,8 +39,8 @@ public class Task_Top10 extends AsyncTask<String, Void, Integer> {
         int code = -1;
         String s;
         try {
-            // URL
-            URL url = new URL("http://192.168.1.4/php/afficher_top.php?"+
+            // DATABASE
+            URL url = new URL(DATABASE.getURL() + "afficher_top.php?"+
                     "jeu="+params[0]);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");

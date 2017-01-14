@@ -35,8 +35,8 @@ public class Task_ScoreSave extends AsyncTask<String, Void, String> {
         StringBuilder Sb = new StringBuilder();
         String line;
         try {
-            // URL
-            URL url = new URL("http://192.168.1.4/php/ajouter_score.php?"+
+            // DATABASE
+            URL url = new URL(DATABASE.getURL() + "ajouter_score.php?"+
                     "jeu="+params[0]+
                     "&score="+params[1]+
                     "&pseudo="+params[2]);

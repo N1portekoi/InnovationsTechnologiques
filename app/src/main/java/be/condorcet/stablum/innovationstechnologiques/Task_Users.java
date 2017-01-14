@@ -43,8 +43,8 @@ public class Task_Users extends AsyncTask<String, Void, Integer> {
         int code = -1;
         String s;
         try {
-            // URL
-            URL url = new URL("http://192.168.1.4/php/lister_pseudos.php");
+            // DATABASE
+            URL url = new URL(DATABASE.getURL() + "lister_pseudos.php");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
             // Reading

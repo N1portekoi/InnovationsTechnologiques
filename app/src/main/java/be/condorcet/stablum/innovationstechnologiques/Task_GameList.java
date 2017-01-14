@@ -41,8 +41,8 @@ public class Task_GameList extends AsyncTask<Void, Void, Integer> {
     protected Integer doInBackground(Void... params) {
         int code = -1;
         try {
-            // URL
-            URL url = new URL("http://192.168.1.4/php/lister_jeux.php");
+            // DATABASE
+            URL url = new URL(DATABASE.getURL() + "lister_jeux.php");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
             // Reading

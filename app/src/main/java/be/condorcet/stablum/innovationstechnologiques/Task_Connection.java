@@ -17,7 +17,6 @@ import java.net.URL;
 /**
  * Created by Ludovic on 27-12-16.
  */
-
 public class Task_Connection extends AsyncTask<String, Void, String> {
     private Context context;
     private String login;
@@ -35,8 +34,8 @@ public class Task_Connection extends AsyncTask<String, Void, String> {
         StringBuilder Sb = new StringBuilder();
         String line;
         try {
-            // URL
-            URL url = new URL("http://192.168.1.4/php/se_connecter.php");
+            // DATABASE
+            URL url = new URL(DATABASE.getURL() + "se_connecter.php");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
             connection.setAllowUserInteraction(false);

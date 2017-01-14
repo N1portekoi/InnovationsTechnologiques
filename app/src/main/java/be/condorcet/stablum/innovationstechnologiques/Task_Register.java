@@ -32,8 +32,8 @@ public class Task_Register extends AsyncTask<String, Void, Integer> {
     protected Integer doInBackground(String... params) {
         int code = -1;
         try {
-            // URL
-            URL url = new URL("http://192.168.1.4/php/creer_compte.php");
+            // DATABASE
+            URL url = new URL(DATABASE.getURL() + "creer_compte.php");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
             connection.setAllowUserInteraction(false);

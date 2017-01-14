@@ -1,4 +1,69 @@
 <resources>
-    <string name="app_name">SCORE</string>
-    <string name="test">Français</string>
+    <!-- Application -->
+    <string name="titleApplication">SCORE !</string>
+    <!-- Connection -->
+    <string name="titleConnection">Connexion</string>
+    <string name="hintLogin">Pseudo</string>
+    <string name="hintPassword">Mot de passe</string>
+    <string name="btnSignIn">Se connecter</string>
+    <string name="btnSignUp">S'enregistrer</string>
+    <!-- Controller_Register -->
+    <string name="titleRegister">Enregistrement</string>
+    <string name="hintConfirmPassword">Confirmmer le mot de passe</string>
+    <string name="btnRegister">S'enregistrer</string>
+    <!-- Menu -->
+    <string name="titleMenu">Menu</string>
+    <string name="btnScore">Score</string>
+    <string name="btnTop10">Top 10</string>
+    <string name="btnGames">Jeux</string>
+    <string name="btnUsers">Utilisateurs</string>
+    <string name="btnSignOut">Deconnexion</string>
+    <!-- Score -->
+    <string name="titleScore">Score</string>
+    <string name="hintGame">Jeu</string>
+    <string name="btnGame">...</string>
+    <string name="listGame">Jeux</string>
+    <string name="hintScore">Score</string>
+    <string name="btnSaveScore">Sauvegarder</string>
+    <!-- Top 10 -->
+    <string name="titleTop10">Top 10</string>
+    <string name="btnTop10Display">Afficher</string>
+    <!-- Games -->
+    <string name="titleGames">Jeux</string>
+    <string name="game">Jeu</string>
+    <!-- Users -->
+    <string name="titleUsers">Utilisateurs</string>
+
+    <!-- Connection Messages -->
+    <string name="C100">Pseudo manquant !</string>
+    <string name="C110">Mot de passe manquant !</string>
+    <string name="C200">Mauvais pseudo/mot de passe !</string>
+
+    <!-- Register Messages -->
+    <string name="R0">Compte crée !</string>
+    <string name="R100">Pseudo manquant !</string>
+    <string name="R110">Mot de passe manquant !</string>
+    <string name="R120">Mots de passe non identiques !</string>
+    <string name="R200">Pseudo déja utilisé !</string>
+
+    <!-- GameList Messages -->
+    <string name="Gl500">Aucun jeu trouvé !</string>
+
+    <!-- ScoreSave Messages -->
+    <string name="SS0">Score sauvegardé !</string>
+    <string name="SS90">Nombre invalide !</string>
+    <string name="SS100">Score manquant !</string>
+    <string name="SS110">Jeu manquant !</string>
+    <string name="SS120">ID manquant !</string>
+
+    <!-- Top50 Messages -->
+    <string name="T100">Jeu manquant !</string>
+    <string name="T500">Aucun score trouvé !</string>
+
+    <!-- GameList Messages -->
+    <string name="U500">Aucun jeu trouvé !</string>
+
+    <!-- DB Messages -->
+    <string name="DB1000">Probleme serveur !</string>
+    <string name="DB2000">Erreur !</string>
 </resources>
